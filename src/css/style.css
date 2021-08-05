@@ -1,52 +1,61 @@
-p{
+body {
+    font-family: Arial, sans-serif;
+}
+nav {
+    width: 100%;
+    height: 60px;
+    background: green;
+}
+.myname {
+    color: aqua;
     font-size: 20px;
+    line-height: 60px;
+    padding-left: 270px;
+    float: left;
+    
 }
-p{
-    color: darkslateblue;
+.menu {
+    float: left;
+    padding-left: 330px;
 }
-div{
-    font-size: 20px;
-    color:darkorange;
-}
-h5{
-    font-size: 50px;
-}
-header{
-    box-sizing: border-box: width="15px" height="15px";
-}
-header {
-    font-family: verdana;
-    font-size: 50px;
-    cursor: pointer;
-    white-space: nowrap;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
-header span {
-    display: inline-block;
-    overflow: hidden;
-    transition: all 0.3s ease-out;
+.menu li{
+    float: left;
+    line-height: 60px;
     color: darkblue;
+    margin-right: 40px;
+    font-size: 14px;
+    text-transform: uppercase;
 }
-header span:nth-child(even) {
-    color: brown;
-    letter-spacing: -40px;
+.main {
+    width: 100%;
+    height: calc(100% - 60px);
+    background: url(https://tlgrm.ru/_/stickers/0b7/22f/0b722fbb-9ce6-365b-9e01-91161b7e391c/6.webp) 100% 100%/auto no-repeat ,url(https://i.pinimg.com/originals/aa/59/2d/aa592d4a89658de94655409efe406476.jpg) center/cover no-repeat;
 }
-header:hover span:nth-child(even){
-    letter-spacing: 0;
+.title_container {
+    float: left;
+    margin: 220px 0px 0px 330px;
+    color: beige;
+    text-align: left;
 }
-header:hover span:nth-child(2){
-    letter-spacing: 1s;
+.title_container h1{
+    font-size: 50px;
+    font-weight: bold;
+    font-family: cursive;
 }
-header:hover span:nth-child(4){
-    letter-spacing: 20 s;
+.title_container h4{
+    margin-top: 20px;
+    font-size: 30px;
+    font-family: fantasy;
 }
-header:hover span:nth-child(6){
-    letter-spacing: 3s;
-}
-header:hover span:nth-child(8){
-    letter-spacing: 4s;
+.title_container input{
+    margin-top: 20px;
+    height: 40px;
+    text-align: left;
+    border: 3px solid green;
+    background: none;
+    border-radius: 8px;
+    color: antiquewhite;
+    font-size: 17px;
+    padding: 0px 15px;
+    margin-right: 15px;
 }
