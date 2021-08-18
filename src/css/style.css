@@ -5,14 +5,27 @@ nav {
     width: 100%;
     height: 60px;
     background: green;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 .myname {
     color: aqua;
     font-size: 20px;
     line-height: 60px;
-    padding-left: 180px;
+    padding-left: 200px;
     float: left;
-    
+    -webkit-animation: comming 4s;
+    -o-animation: comming 4s;
+    animation: comming 4s;
+}
+@keyframes comming{
+    from{
+        opacity: 0; 
+    }
+    to{
+        opacity: 1;
+    } 
 }
 .menu {
     float: left;
@@ -21,21 +34,80 @@ nav {
 .menu li{
     float: left;
     line-height: 60px;
-    color: darkblue;
+    color: blue;
     margin-right: 40px;
-    font-size: 14px;
+    font-size: 15px;
     text-transform: uppercase;
+    -webkit-animation: down 0.4s forwards;
+    -o-animation: down 0.4s forwards;
+    animation: down 0.4s forwards;
+    opacity: 0;
+}
+.menu li:nth-child(2){
+    animation-delay: 0.3s;
+}
+.menu li:nth-child(3){
+    animation-delay: 0.6s;
+}
+.menu li:nth-child(4){
+    animation-delay: 0.9s;
+}
+.menu li:nth-child(5){
+    animation-delay: 1.2s;
+}
+.menu li:nth-child(6){
+    animation-delay: 1.5s;
+}
+.menu a {
+    transition: all 0.5s;
+    color: darkblue;
+    display: inline-block;
+    transform: scale(1);
+}
+.menu a:visited {
+    color: darkblue;
+}
+.menu a:hover {
+    color: lightblue;
+ 
+}
+.menu a:active {
+    transform: scale(1.1);
+}
+@keyframes down{
+    from{
+        opacity: 0;
+        margin-top: -80px;
+    }
+    to{
+        opacity: 1;
+        margin-top: 0px;
+    }
 }
 .main {
     width: 100%;
-    height: calc(100% - 60px);
-    background: url(https://tlgrm.ru/_/stickers/0b7/22f/0b722fbb-9ce6-365b-9e01-91161b7e391c/6.webp) 100% 100%/auto no-repeat ,url(https://i.pinimg.com/originals/aa/59/2d/aa592d4a89658de94655409efe406476.jpg) center/cover no-repeat;
+    height: 100%;
+    background: url(https://tlgrm.ru/_/stickers/0b7/22f/0b722fbb-9ce6-365b-9e01-91161b7e391c/6.webp) 100% 100%/auto no-repeat ,url(https://i.pinimg.com/originals/aa/59/2d/aa592d4a89658de94655409efe406476.jpg)  center/cover no-repeat;
 }
 .title_container {
     float: left;
     margin: 220px 0px 0px 330px;
     color: beige;
     text-align: left;
+    opacity: 0;
+    -webkit-animation: titlemove 1.6s forwards;
+    -o-animation: titlemove 1.6s forwards;
+    animation: titlemove 1.6s forwards;
+}
+@keyframes titlemove{
+    from{
+        opacity: 0;
+        margin-left: -300px;
+    }
+    to{
+        opacity: 1;
+        margin-left: 330px;
+    }
 }
 .title_container h1{
     font-size: 50px;
@@ -58,6 +130,14 @@ nav {
     font-size: 17px;
     padding: 0px 15px;
     margin-right: 15px;
+    font-weight: 200;
+}
+.title_container input:active {
+    color: black;
+    background-color: goldenrod;
+    transform: scale(1);
+    transition: all 0.17s;
+    font-weight: 300;
 }
 div.biography{
     width: 100%;
@@ -114,30 +194,64 @@ div.services{
     font-family: serif;
     text-transform: uppercase;
 }
+.services p{
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: brown;
+    font-weight: 200;
+}
 .cases{
     width: 100%;
-    height: 100%;
-    background: url(https://i.ytimg.com/vi/8Y1-soEPoFo/maxresdefault.jpg) center/cover no-repeat;
+    height: 550px;
+    background: url(https://i1.wp.com/www.desktopbackground.org/download/3840x2160/2015/09/10/1009146_green-digital-matrix-abstract-backgrounds_4500x3000_h.jpg) center/cover no-repeat;
 }
 .cases h2{
-    margin: 10px 55% 0px 45%;
-    padding: 20px 0px;
+    padding: 10px 55% 0px 45%;
     float: left;
     text-align: center;
     font-family: cursive;
     font-size: 50px;
     font-weight: bold;
-    color: orangered;
+    color: darkturquoise;
 }
 .cases p{
-    margin: 10px 53.7% 0px 46.3%;
+    padding: 10px 34% 0px 27.7%;
+}
+.cases span{
+    background: green;
+    font-size: 18px;
+    font-weight: 200;
+    font-family: sans-serif;
+    text-align: center;
+}
+div.stats {
+   width: 100%;
+    height: 350px;
+    background: url(https://img5.goodfon.ru/original/2560x1600/3/51/grafik-schedule-green-zelionyi-fon-fon.jpg) center/cover no-repeat;
+}
+.stats h2{
+    margin: 00px 50% 0px 46%;
     padding: 20px 0px;
+    color: floralwhite;
+    font-family: cursive;
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+} 
+span.uno ul{
+    padding-left: 25.3%;
     float: left;
     text-align: center;
-    font-family: fantasy;
-    font-size: 30px;
-    font-weight: bold;
-    color: orangered;
+    text-transform: uppercase;
+}
+.uno li{
+    float: left;
+    line-height: 60px;
+    color: black;
+    margin-right: 40px;
+    font-size: 14px;
+    font-family: serif;
+    text-transform: uppercase;
 }
 div.price{
     width: 100%;
