@@ -2,295 +2,55 @@ body {
     font-family: Arial, sans-serif;
 }
 nav {
-    width: 100%;
     height: 60px;
+    width: 100%;
     background: green;
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: fixed;  
 }
-.myname {
-    color: aqua;
-    font-size: 20px;
+.logo {
+    color: aliceblue;
+    font-size: 28px;
     line-height: 60px;
-    padding-left: 200px;
     float: left;
-    -webkit-animation: comming 4s;
-    -o-animation: comming 4s;
-    animation: comming 4s;
 }
-@keyframes comming{
-    from{
-        opacity: 0; 
-    }
-    to{
-        opacity: 1;
-    } 
+main {
+    width: 100%;
+    height: 100%;
 }
 .menu {
     float: left;
-    padding-left: 240px;
 }
-.menu li{
+.menu li {
     float: left;
     line-height: 60px;
-    color: blue;
+    color: aliceblue;
     margin-right: 40px;
-    font-size: 15px;
-    text-transform: uppercase;
-    -webkit-animation: down 0.4s forwards;
-    -o-animation: down 0.4s forwards;
-    animation: down 0.4s forwards;
-    opacity: 0;
+    font-size: 14px;
 }
-.menu li:nth-child(2){
-    animation-delay: 0.3s;
-}
-.menu li:nth-child(3){
-    animation-delay: 0.6s;
-}
-.menu li:nth-child(4){
-    animation-delay: 0.9s;
-}
-.menu li:nth-child(5){
-    animation-delay: 1.2s;
-}
-.menu li:nth-child(6){
-    animation-delay: 1.5s;
-}
-.menu a {
-    transition: all 0.5s;
-    color: darkblue;
+.menu li a {
     display: inline-block;
-    transform: scale(1);
 }
-.menu a:visited {
-    color: darkblue;
+.about_me img {
+    border: black 5px;
+    border-radius: 50px;
 }
-.menu a:hover {
-    color: lightblue;
- 
-}
-.menu a:active {
-    transform: scale(1.1);
-}
-@keyframes down{
-    from{
-        opacity: 0;
-        margin-top: -80px;
-    }
-    to{
-        opacity: 1;
-        margin-top: 0px;
-    }
-}
-.main {
+.abilities {
     width: 100%;
-    height: 100%;
-    background: url(https://tlgrm.ru/_/stickers/0b7/22f/0b722fbb-9ce6-365b-9e01-91161b7e391c/6.webp) 100% 100%/auto no-repeat ,url(https://i.pinimg.com/originals/aa/59/2d/aa592d4a89658de94655409efe406476.jpg)  center/cover no-repeat;
+    height: 200px;
+    background: yellow;
 }
-.title_container {
-    float: left;
-    margin: 220px 0px 0px 330px;
-    color: beige;
-    text-align: left;
-    opacity: 0;
-    -webkit-animation: titlemove 1.6s forwards;
-    -o-animation: titlemove 1.6s forwards;
-    animation: titlemove 1.6s forwards;
+.abilities row{
+    background-color: burlywood;
+    display: flex;
+    justify-content: center;
 }
-@keyframes titlemove{
-    from{
-        opacity: 0;
-        margin-left: -300px;
-    }
-    to{
-        opacity: 1;
-        margin-left: 330px;
-    }
-}
-.title_container h1{
-    font-size: 50px;
-    font-weight: bold;
-    font-family: cursive;
-}
-.title_container h4{
-    margin-top: 20px;
-    font-size: 30px;
-    font-family: fantasy;
-}
-.title_container input{
-    margin-top: 20px;
-    height: 40px;
-    text-align: left;
-    border: 3px solid green;
-    background: none;
-    border-radius: 8px;
-    color: antiquewhite;
-    font-size: 17px;
-    padding: 0px 15px;
-    margin-right: 15px;
-    font-weight: 200;
-}
-.title_container input:active {
-    color: black;
-    background-color: goldenrod;
-    transform: scale(1);
-    transition: all 0.17s;
-    font-weight: 300;
-}
-div.biography{
-    width: 100%;
-    height: 300px;
-    background: cyan;
-}
-.biography h2{
-    margin: 0px 55.5% 0px 44.5%;
-    padding: 10px 0px;
-    float: left;
-    text-align: center;
-    font-family: cursive;
-    font-size: 25px;
-    font-weight: bold;
-}
-.biography span{
-    margin: 0px 54% 10px 46%;
-    float: left;
-    text-align: center;
-}
-.biography p{
-    margin: 0px 0px;
-    float: left;
-    text-align: center;
-    font-size: 17px;
-    font-family: sans-serif;
-}
-div.services{
-    width: 100%;
-    height: 300px;
-    background: burlywood; 
-}
-.services h2{
-    margin: 0px 55% 0px 45%;
-    padding: 10px 0px;
-    float: left;
-    text-align: center;
-    font-family: cursive;
-    font-size: 25px;
-    font-weight: bold;
-}
-.services ul{
-    padding-left: 33.3%;
-    float: left;
-    text-align: center;
-    text-transform: uppercase;
-}
-.services li{
-    float: left;
-    line-height: 60px;
-    color: black;
-    margin-right: 40px;
-    font-size: 14px;
-    font-family: serif;
-    text-transform: uppercase;
-}
-.services p{
-    font-family: Arial, sans-serif;
-    font-size: 12px;
-    color: brown;
-    font-weight: 200;
-}
-.cases{
-    width: 100%;
-    height: 550px;
-    background: url(https://i1.wp.com/www.desktopbackground.org/download/3840x2160/2015/09/10/1009146_green-digital-matrix-abstract-backgrounds_4500x3000_h.jpg) center/cover no-repeat;
-}
-.cases h2{
-    padding: 10px 55% 0px 45%;
-    float: left;
-    text-align: center;
-    font-family: cursive;
-    font-size: 50px;
-    font-weight: bold;
-    color: darkturquoise;
-}
-.cases p{
-    padding: 10px 34% 0px 27.7%;
-}
-.cases span{
-    background: green;
-    font-size: 18px;
-    font-weight: 200;
-    font-family: sans-serif;
-    text-align: center;
-}
-div.stats {
-   width: 100%;
-    height: 350px;
-    background: url(https://img5.goodfon.ru/original/2560x1600/3/51/grafik-schedule-green-zelionyi-fon-fon.jpg) center/cover no-repeat;
-}
-.stats h2{
-    margin: 00px 50% 0px 46%;
-    padding: 20px 0px;
-    color: floralwhite;
-    font-family: cursive;
-    font-size: 25px;
-    text-align: center;
-    font-weight: bold;
-} 
-span.uno ul{
-    padding-left: 25.3%;
-    float: left;
-    text-align: center;
-    text-transform: uppercase;
-}
-.uno li{
-    float: left;
-    line-height: 60px;
-    color: black;
-    margin-right: 40px;
-    font-size: 14px;
-    font-family: serif;
-    text-transform: uppercase;
-}
-div.price{
-    width: 100%;
-    height: 400px;
-    background: url(https://specials-images.forbesimg.com/imageserve/5fd6765981a990c849948bcd/960x0.jpg?fit=scale) center/cover repeat;
-}
-.price h2{
-    margin: 10px 55% 0px 45%;
-    padding: 20px 0px;
-    float: left;
-    text-align: center;
-    font-family: cursive;
-    font-size: 30px;
-    font-weight: bold;
-    background: white;
-}
-.price table{
-    margin: 10px 68% 0px 32%;
-    padding: 20px 0px;
-    float: left;
-    text-align: center;
-    font-family: fantasy;
+.brawl {
+    padding: 5px;
     font-size: 20px;
-    font-weight: bold;
-}
-.price tr{
-    background: white;
-}
-footer{
-    width: 100%;
-    height: 250px;
-    background: darkslategrey;
-}
-footer span{
-    margin: 50px auto;
-    float: left;
-    margin-left: 130px;
+    line-height: 200px;
     text-align: center;
-    font-size: 25px;
-    font-family: sans-serif;
-    font-weight: 600;
+}
+.brawl img {
+    border: black 5px;
+    border-radius: 50px;
 }
