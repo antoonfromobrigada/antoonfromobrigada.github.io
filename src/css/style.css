@@ -5,7 +5,8 @@ nav {
     height: 60px;
     width: 100%;
     background: #150101;
-    position: fixed;  
+    position: fixed; 
+    z-index: 10;
 }
 .logo {
     color: aliceblue;
@@ -36,6 +37,12 @@ nav {
     color: aliceblue;
     display: inline-block;
     text-decoration: none;
+}
+.white-btn {
+    color: white;
+}
+.white-btn:visited {
+    color: white;
 }
 main {
     width: 100%;
@@ -219,4 +226,30 @@ footer h2 {
 }
 .contacts impmes {
     height: 20px;
+}
+@media (max-width:576px){
+    
+    .title_container {
+        margin-top: 90px;
+        background-color: dimgrey;
+        border: 1px black;
+        border-radius: 20px;
+    }
+    .about_me {
+        height: 430px;
+    }
+    .abilities {
+        height: 250px;
+    }
+    .reviews {
+        display: none;
+    }
+    .stats {
+        height: 500px;
+    } 
+}
+@media (max-width:321px){
+    .white-btn {
+        font-size: 12px;
+    }
 }
