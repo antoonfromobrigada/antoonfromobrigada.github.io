@@ -39,8 +39,8 @@
                         <ul>
                             <li><a href="#about">Обо мне</a></li>
                             <li><a href="#abil">Услуги</a></li>
-                            <li><a href="#stats1">Кейсы</a></li>
-                            <li><a href="#">Прайс</a></li>
+                            <li><a href="#case">Кейсы</a></li>
+                            <li><a href="#pric">Прайс</a></li>
                             <li><a href="#revi">Отзывы</a></li>
                             <li><a href="#cont">Контакты</a></li>
                         </ul>
@@ -53,9 +53,9 @@
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
     <li><a class="dropdown-item" href="#about">Обо мне</a></li>
     <li><a class="dropdown-item" href="#abil">Услуги</a></li>
-    <li><a class="dropdown-item" href="#stats1">Кейсы</a></li>
-    <li><a class="dropdown-item" href="#">Прайс</a></li>
-    <li><a class="dropdown-item" href="#revi">Отзывы</a></li>
+    <li><a class="dropdown-item" href="#case">Кейсы</a></li>
+    <li><a class="dropdown-item" href="#pric">Прайс</a></li>
+    <li><a class="dropdown-item" href="#reviS">Отзывы</a></li>
     <li><a class="dropdown-item" href="#cont">Контакты</a></li>
   </ul>
 </div>
@@ -68,7 +68,7 @@
         <section class="main" id="main1">
           <div class="container h-100"><div class="row align-items-center h-100"><div class="col-lg-6 mt-200">
              <div class="title_container">
-               <h1>Привет <br>Меня зовут Антон</h1>
+               <h1 class=" wow slideInLeft">Привет <br>Меня зовут Антон</h1>
                <h4><i class="fa fa-user custom-user" aria-hidden="true"></i>Фулл-стек веб-разработчик</h4>
                <input type="button" value="Обо мне">
                <input type="button" value="Мои работы">
@@ -86,13 +86,126 @@
     
     <section class="abilities" id="abil">
         <div class="container h-100">
-        <div class="row align-items-center h-100"><h2>Что я умею</h2>
-        <div class="brawl"><img src="https://pbs.twimg.com/media/DDAMwQqVoAACqgM.jpg" alt="bra" width="50px"><br>Я играю в бравлик у меня уже 23к кубков кстати</div>
+        <div class="row align-items-center h-100 "><h2>Что я умею</h2>
+        <div class="brawl"><img src="https://pbs.twimg.com/media/DDAMwQqVoAACqgM.jpg" alt="bra" width="50px"><br>Я играю в бравлик у меня уже 24к кубков кстати</div>
+        </div></div>
+    </section>
+    
+    <section class="cases" id="case">
+        <div class="container h-100"><div class="row h-100">
+            <h2>Кейсы</h2>
+            <span>Лол а что вы ожидали увидеть я еще ничего не сделал</span>
+        </div></div>
+    </section>
+    
+    <section class="price" id="pric">
+        <div class="container h-100"><div class="row h-100">
+            <h2>Калькулятор стоимости (пока что спизженный но обещаю настроить)</h2>
+            <form>
+  <div class="row mb-3">
+    <div class="form-group col-md-6 col-sm-6">
+      <p class="badge badge-warning">Вес (кг)</p>
+      <input type="text" name="date" class="form-control" id="weight" required="" placeholder="1500" required=""/>
+    </div>
+    <div class="form-group col-md-6 col-sm-6">
+      <p class="badge badge-warning">Объем (куб²)</p>
+      <input type="text" name="adress" id="vol" class="form-control" placeholder="2" required=""/>
+    </div>
+  </div>
+  <div class="custom-control custom-checkbox row d-flex justify-content-center mb-3">
+    <div class="col-md-3" style="visibility: visible;">
+      <input type="checkbox" id="load" name="mess" class="custom-control-input"/>
+      <label class="custom-control-label" for="load">Нужна погрузка</label>
+    </div>
+ 
+    <div class="col-md-3" style="visibility: visible;">
+      <input type="checkbox" id="del" name="mess" class="custom-control-input"/>
+      <label class="custom-control-label" for="del">Доставка до места</label>
+    </div>
+ 
+    <div class="col-md-3" style="visibility: visible;">
+      <input type="checkbox" id="frag" name="mess" class="custom-control-input"/>
+      <label class="custom-control-label" for="frag">Хрупкий груз</label>
+    </div>
+  </div>
+  <div class="row mb-3">
+ 
+    <div class="form-group col-md-12">
+      <label for="range">Расстояние <span class="rasstoyanie">0</span> <span>км</span></label>
+      <input type="range" class="custom-range" min="50" max="5000" step="50" id="range" value="500"/>
+    </div>
+ 
+  </div>
+  <div class="row col-12 mb-3"><span id="out">0.0</span> <span class="rub">₽</span></div>
+  <div class="row">
+      <div class="col-md-2 col-12">
+        <input type="button" name="adress" id="btn" class="btn-block btn btn-primary" value="Считать"/>
+      </div>
+  </div>
+</form>
+            <script>
+            var btn = document.querySelector('#btn'),
+    out = document.querySelector('#out'),
+    weight = document.querySelector('#weight'),
+    vol = document.querySelector('#vol'),
+    load = document.querySelector('#load'),
+    del = document.querySelector('#del'),
+    frag = document.querySelector('#frag'),
+    range = document.querySelector('#range'),
+    rasstoyanie = document.querySelector('.rasstoyanie').innerHTML = 500;
+    weight = document.querySelector('#weight'),
+    vol = document.querySelector('#vol'),
+    kg = 5.5,
+    kub = 3500,
+    km = 2;
+ // range slider
+    range.onchange = function(){
+      var rasstoyanie = document.querySelector('.rasstoyanie').innerHTML = range.value;
+    }
+  // Basic function  
+btn.onclick = function(){
+  if (weight.value != '' && vol.value != '') {
+      if (load.checked){ 
+          load.value = 1500; }
+        else 
+        {
+          load.value = 0;
+      }
+      if (del.checked){ 
+          del.value = 3500; }
+        else 
+        {
+          del.value = 0;
+      }
+      if (frag.checked){ 
+          frag.value = 2000; }
+        else 
+        {
+          frag.value = 0;
+      }
+ 
+var sum = (weight.value * kg) + (vol.value * kub) + Number(load.value) + + Number(del.value) + Number(frag.value) + (range.value * km);
+      out.innerHTML = sum;
+  }else{
+alert('Введите вес и объем груза');
+}
+}
+            </script>
+        </div></div>
+    </section>
+    
+    <section class="reviewsS" id="reviS">
+        <div class="container h-100"><div class="row h-100">
+            <h2>Отзывы</h2>
+            <div class="lena1"><span><img src="https://ps.vk.me/c11303/u53413238/l_fc207b40.png" alt="lenia" width="90px"><br><p>Всем привет я купил квартиру!</p></span></div>
+            <div class="lena2"><span><img src="https://yt3.ggpht.com/ytc/AKedOLTi_GMqsWh88QAymVN2HT_35q_0RhzYOO_enuyPSg=s900-c-k-c0x00ffffff-no-rj" alt="kosta" width="90px"><br><p>Лёня ты большой молодец!</p></span></div>
+            <h3>...а теперь все вместе...</h3>
+            <div class="lena3"><span><img src="https://avatars.mds.yandex.net/get-zen_doc/225409/pub_5bc8f5c2d9537400ababbb8b_5bc8f5eb564edf00a9f418b9/scale_1200" alt="together" width="90px"><br><p>Лёня ты жирный уебан!</p></span></div>  
         </div></div>
     </section>
     
     <section class="reviews" id="revi"><div class="container h-100"><div class="row align-items-center h-100">
-        <h2>Отзывы</h2>
+        <h2 class="wow slideInLeft">Отзывы</h2>
         <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="10000">
@@ -123,7 +236,7 @@
     
     <section class="stats" id="stats1"><div class="container h-100"><div class="row align-items-center h-100">
         <h2>Немного статистики</h2>
-            <div class="stats_box "><img src="img/shelly.png" width="100px" alt="shelly.png"><p>BOYцов: 41<br>Максимум трофеев: 23300<br>Побед в испытаниях: 9<br>Высшая силовая лига: ЗОЛОТОЙ I</p></div>
+            <div class="stats_box "><img src="img/shelly.png" width="100px" alt="shelly.png"><p>BOYцов: 42<br>Максимум трофеев: 24300<br>Побед в испытаниях: 9<br>Высшая силовая лига: ЗОЛОТОЙ I</p></div>
     </div>
        </div>
     </section>
@@ -135,6 +248,8 @@
    </footer>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/myScript2.js"></script>
     <script src="js/myScript.js"></script>
     </body>
    </html>
